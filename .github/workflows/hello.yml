@@ -7,3 +7,12 @@ jobs:
     steps:
     - name: Say Hello
       run: echo "Hello, world!"
+
+  run_script:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Run Python script
+      run: python code/hello.py
